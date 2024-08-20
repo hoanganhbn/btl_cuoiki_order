@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đếm Số Lượng Phần Tử Div</title>
+</head>
+<body>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <div>Div 4</div>
+
+    <p id="result"></p>
+
+    <script>
+        const divElements = document.querySelectorAll('div');
+        const divCount = divElements.length;
+        const resultElement = document.getElementById('result');
+        resultElement.textContent = `Có ${divCount} phần tử <div> trên trang này.`;
+    </script>
+</body>
+</html>
