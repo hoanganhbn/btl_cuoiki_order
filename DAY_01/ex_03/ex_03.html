@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm phần tử mới vào DOM</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Mục 01</li>
+        <li>Mục 02</li>
+    </ul>
+
+    <script>
+        const listElement = document.getElementById('list');
+        const newItem = document.createElement('li');
+        newItem.textContent = 'Mục Mới Thêm';
+        listElement.appendChild(newItem);
+    </script>
+</body>
+</html>

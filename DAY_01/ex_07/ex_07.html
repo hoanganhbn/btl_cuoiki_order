@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi nội dung của nhiều phần tử</title>
+</head>
+<body>
+    <p>HAHA</p>
+    <p>HIHI</p>
+    <p>HUHU</p>
+
+    <script>
+        const paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach(function(paragraph) {
+            paragraph.textContent = 'Updated paragraph';
+        });
+    </script>
+</body>
+</html>
