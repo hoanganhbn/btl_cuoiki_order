@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Sinh Viên</h1>
+        <button id="add-student-btn">Thêm Sinh Viên</button>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Mã SV</th>
+                    <th>Họ Tên</th>
+                    <th>Giới Tính</th>
+                    <th>Ngày Sinh</th>
+                    <th>Quê Quán</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <div id="student-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Thêm/Sửa Sinh Viên</h2>
+            <form id="student-form">
+                <input type="hidden" id="student-id">
+                <label for="student-code">Mã SV:</label>
+                <input type="text" id="student-code" required>
+                <label for="student-name">Họ Tên:</label>
+                <input type="text" id="student-name" required>
+                <label for="student-gender">Giới Tính:</label>
+                <select id="student-gender">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+                <label for="student-dob">Ngày Sinh:</label>
+                <input type="date" id="student-dob" required>
+                <label for="student-hometown">Quê Quán:</label>
+                <input type="text" id="student-hometown" required>
+                <button type="submit">Lưu</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
