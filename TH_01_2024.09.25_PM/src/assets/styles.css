@@ -1,0 +1,173 @@
+.app {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    text-align: left;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+h1 span {
+    margin-left: 10px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.task-content {
+    display: flex;
+    align-items: center;
+}
+
+.radio-button {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    position: relative;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-button:checked {
+    background-color: transparent;
+}
+
+.radio-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-button:checked:before {
+    background-color: #00AA55;
+}
+
+.task-date {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.tomorrow {
+    color: orange;
+}
+
+.saturday {
+    color: purple;
+}
+
+.monday {
+    color: blue;
+}
+
+.today {
+    color: green;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-task-container {
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    justify-content: flex-start;
+}
+
+.add-task-button {
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-task-button span {
+    color: red;
+    margin-right: 5px;
+}
+
+.add-task-button:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.task-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.submit-task-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-task-button:hover {
+    background-color: darkred;
+}
+
+.radio-button.tomorrow {
+    border-color: rgb(187, 152, 88);
+}
+
+.radio-button.saturday {
+    border-color: rgb(155, 53, 155);
+}
+
+.radio-button.monday {
+    border-color: rgb(38, 38, 126);
+}
+
+.radio-button.today {
+    border-color: rgb(18, 128, 18);
+}
+
