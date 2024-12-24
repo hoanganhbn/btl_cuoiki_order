@@ -1,0 +1,137 @@
+/* frontend/src/styles/pages/Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+/* frontend/src/styles/pages/Home.css */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../../../public/images/che-background.jpg') center/cover no-repeat;
+  /* hoặc có thể dùng */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('%PUBLIC_URL%/images/che-background.jpg') center/cover no-repeat; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+}
+
+.hero-section {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.leaf-icon {
+  font-size: 3rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.main-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.feature-section {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.feature-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #4CAF50;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.home-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.customer {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.staff {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.button-icon {
+  font-size: 1.2rem;
+}
+
+.home-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .feature-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .home-buttons {
+    flex-direction: column;
+  }
+}

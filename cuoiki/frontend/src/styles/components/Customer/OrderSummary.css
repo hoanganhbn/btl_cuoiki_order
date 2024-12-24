@@ -1,0 +1,125 @@
+/* frontend/src/styles/components/Customer/OrderSummary.css */
+.order-summary-container {
+  background-color: #f8f9fa;
+  border-radius: 12px; /* More rounded corners */
+  padding: 20px; /* Increased padding */
+  border: 1px solid #ecf0f1; /* Lighter border */
+}
+
+.empty-order {
+  color: #7f8c8d;
+  font-style: italic;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.order-items {
+  list-style: none;
+  padding: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0; /* Increased padding */
+  border-bottom: 1px solid #ecf0f1; /* Lighter border */
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-info span:first-child {
+  font-weight: bold;
+  margin-right: 15px;
+  color: #333;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+}
+
+.item-total {
+  font-weight: bold;
+  margin-right: 15px;
+  color: #27ae60;
+  font-size: 1.1rem;
+}
+
+.remove-item-button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.remove-item-button:hover {
+  opacity: 1;
+}
+
+.order-summary-total {
+  text-align: right;
+  margin-top: 20px; /* Increased margin */
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.order-summary-total span {
+  color: #27ae60;
+}
+
+/* Thêm vào file CSS hiện tại của bạn */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.quantity-btn {
+  background-color: #f0f0f0;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-btn i {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.quantity-input {
+  width: 45px;
+  height: 28px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  opacity: 1;
+  height: 28px;
+}

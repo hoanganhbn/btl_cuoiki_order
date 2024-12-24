@@ -1,0 +1,14 @@
+/*//backend/src/styles/components/Customer/QRScanner.css*/
+.qr-scanner-container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .qr-scanner-error {
+    color: #e74c3c;
+    margin-top: 10px;
+  }

@@ -1,0 +1,243 @@
+/* frontend/src/styles/pages/Staff.css */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.staff-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Sidebar Styles */
+.staff-sidebar {
+  width: 280px;
+  background: linear-gradient(135deg, #1a472a, #2d5a27);
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  z-index: 100;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.sidebar-header h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateX(5px);
+}
+
+.menu-item.active {
+  background: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item svg {
+  font-size: 1.2rem;
+}
+
+.logout-button {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  color: #ff4444;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Main Content Area */
+.staff-main {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.main-header {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.main-header h1 {
+  color: #2d5a27;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.main-content {
+  position: relative;
+  min-height: calc(100vh - 180px);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+/* Toast Customization */
+.Toastify__toast {
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Toastify__toast--success {
+  background: #4CAF50;
+}
+
+.Toastify__toast--error {
+  background: #f44336;
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .staff-sidebar {
+    width: 80px;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .sidebar-header h2,
+  .menu-item span,
+  .logout-button span {
+    display: none;
+  }
+
+  .staff-main {
+    margin-left: 80px;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .logout-button {
+    justify-content: center;
+  }
+
+  .main-header {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .staff-main {
+    padding: 1rem;
+  }
+
+  .main-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 140px);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .staff-sidebar {
+    display: none;
+  }
+
+  .staff-main {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .main-header {
+    box-shadow: none;
+  }
+}
