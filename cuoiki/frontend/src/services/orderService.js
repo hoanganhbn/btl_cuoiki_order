@@ -1,7 +1,7 @@
 // frontend/src/services/orderService.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/orders';
+const API_URL = 'https://order-food-rmd5.onrender.com/api/orders';
 
 export const createOrder = async (orderData) => {
   try {
