@@ -1,7 +1,7 @@
 // frontend/src/services/dishService.js
 import axios from 'axios';
 
-const API_URL = 'https://btl-cuoiki-order-1.onrender.com';
+const API_URL = 'https://btl-cuoiki-order.onrender.com/api/dishes';
 
 export const getDishes = async () => {
   try {

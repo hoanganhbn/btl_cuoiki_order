@@ -1,7 +1,7 @@
 // frontend/src/services/tableService.js
 import axios from 'axios';
 
-const API_URL = 'https://btl-cuoiki-order-1.onrender.com';
+const API_URL = 'https://btl-cuoiki-order.onrender.com/api/tables';
 
 export const getAllTables = async () => {
   try {

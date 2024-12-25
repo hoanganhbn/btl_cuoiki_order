@@ -29,7 +29,7 @@ const Home = () => {
           <FaStore className="button-icon" />
           <span>Đặt món ngay</span>
         </Link>
-        <Link to="/login" className="home-button staff"> {/* Thay đổi từ /staff thành /login */}
+        <Link to="/login" className="home-button staff"> 
           <FaUserCog className="button-icon" />
           <span>Đăng nhập nhân viên</span>
         </Link>
