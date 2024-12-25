@@ -27,12 +27,12 @@ const saveQRCode = (base64Data, fileName) => {
 const generateQRCodesForAllTables = async () => {
   try {
     // Lấy danh sách tất cả các bàn
-    const tablesResponse = await axios.get('http://localhost:5000/api/tables');
+    const tablesResponse = await axios.get('https://btl-cuoiki-order.onrender.com/api/tables');
     const tables = tablesResponse.data.data;
 
     // Lặp qua từng bàn và tạo mã QR
     for (const table of tables) {
-      const qrResponse = await axios.get(`http://localhost:5000/api/qr/${table.id}`);
+      const qrResponse = await axios.get(`https://btl-cuoiki-order.onrender.com/api/qr/${table.id}`);
       const qrCodeImage = qrResponse.data.qrCodeImage;
       const fileName = `table${table.id}_qr.png`;
       saveQRCode(qrCodeImage, fileName);
