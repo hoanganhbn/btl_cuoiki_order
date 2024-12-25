@@ -7,6 +7,9 @@ const router = express.Router();
 // Tạo đơn hàng mới
 router.post('/', orderController.createOrder);
 
+// Lấy danh sách đơn hàng
+router.get('/', orderController.getAllOrders); // Định nghĩa API này
+
 // Lấy danh sách đơn hàng theo bàn
 router.get('/table/:tableId', orderController.getOrdersByTable);
 

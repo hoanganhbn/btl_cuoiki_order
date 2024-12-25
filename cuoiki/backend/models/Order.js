@@ -8,6 +8,11 @@ const Order = {
     return rows[0];
   },
   
+  getAll: async () => {
+    const [rows] = await db.query('SELECT * FROM orders');
+    return rows;
+  },
+  
   // Tạo đơn hàng mới
   create: async (orderData) => {
     const { table_id, total_price, status } = orderData;
@@ -47,6 +52,7 @@ const Order = {
       'INSERT INTO order_details (order_id, dish_id, quantity, sub_total) VALUES (?, ?, ?, ?)',
       [orderId, dishId, quantity, subTotal]
     );
+    console.log('Chi tiết đơn hàng đã thêm thành công, ID chi tiết:', result.insertId);
     return result.insertId;
   },
 

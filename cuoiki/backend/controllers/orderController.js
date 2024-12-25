@@ -41,6 +41,17 @@ const orderController = {
     }
   },
 
+
+  getAllOrders: async (req, res) => {
+    try {
+      const orders = await Order.getAll(); // Phương thức getAll sẽ lấy tất cả đơn hàng
+      res.json({ success: true, data: orders });
+    } catch (error) {
+      console.error('Lỗi khi lấy danh sách đơn hàng:', error);
+      res.status(500).json({ success: false, error: 'Lỗi khi lấy danh sách đơn hàng' });
+    }
+  },
+  
   // Lấy danh sách đơn hàng theo bàn
   getOrdersByTable: async (req, res) => {
     try {
