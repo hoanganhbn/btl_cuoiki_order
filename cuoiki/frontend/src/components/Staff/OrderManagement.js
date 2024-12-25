@@ -1,4 +1,3 @@
-// frontend/src/components/Staff/OrderManagement.js
 import React, { useState } from 'react';
 import { FaSearch, FaClock, FaSpinner, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa';
 import '../../styles/components/Staff/OrderManagement.css';
@@ -31,10 +30,12 @@ const OrderManagement = ({ orders, onUpdateStatus }) => {
     };
   };
 
-  const filteredOrders = orders.filter(order => 
-    order.id.toString().includes(searchTerm) ||
-    order.table_id.toString().includes(searchTerm)
-  );
+  const filteredOrders = orders
+    .filter(order => 
+      order.id.toString().includes(searchTerm) ||
+      order.table_id.toString().includes(searchTerm)
+    )
+    .sort((a, b) => b.id - a.id);  // Sắp xếp theo ID giảm dần
 
   return (
     <div className="order-management-container">
